@@ -1,24 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import RestaurantsListPage from './components/RestaurantsListPage/RestaurantsListPage';
+import './App.scss';
+import 'react-toastify/dist/ReactToastify.css';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+import { Route, Routes } from 'react-router-dom';
+import NotFound from './components/404/NotFound';
+import RestaurantPage from './components/RestaurantPage/RestaurantPage';
+import ModalWindow from './components/ModalWindow/ModalWindow';
+import MenuItemDetails from './components/MenuItemDetails/MenuItemDetails';
+import { useSelector } from 'react-redux';
+import Cart from './components/Cart/Cart';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
+  const isOpen = useSelector((state) => state.modal.isOpen);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+        <main className="page">
+            <ToastContainer />
+          <Routes>
+            <Route path="/" element={<RestaurantsListPage />} />
+            <Route path="/:id" element={<RestaurantPage />} />
+            <Route path="/cart" exact element={ <Cart/> } />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </main>
+      <Footer />
+        {isOpen &&
+          <ModalWindow>
+            <MenuItemDetails />
+          </ModalWindow>
+        }
+    </>
   );
 }
 

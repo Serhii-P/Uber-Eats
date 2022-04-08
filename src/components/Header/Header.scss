@@ -1,0 +1,142 @@
+@import '../../styles/utils';
+
+.header {
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
+  padding: 16px 0;
+  z-index: 1;
+  width: 100%;
+
+  &__inner {
+    @extend %flex-row;
+    justify-content: space-between;
+
+    @media (max-width: $break-point-tablet-lg) {
+      flex-direction: column;
+    }
+  }
+
+  &__logo {
+    height: 24px;
+    width: auto;
+  }
+
+  &__delivery-info {
+    @extend %flex-row;
+    margin-left: 7vw;
+
+    @media (max-width: $break-point-tablet-lg) {
+      justify-content: space-between;
+      width: 100%;
+      margin: 20px 0 0 0;
+    }
+  }
+
+  &__link {
+    display: flex;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__toggle-buttons {
+    display: none;
+
+    margin-left: auto;
+    cursor: pointer;
+
+    @media (max-width: $break-point-tablet) {
+      display: flex;
+    }
+  }
+
+  &__toggle-btn {
+    display: flex;
+    align-items: center;
+    padding: 11px 5px;
+    cursor: pointer;
+    border: 1px solid transparent;
+
+    &:not(:last-of-type) {
+      margin-right: 20px;
+    }
+
+    &:focus {
+      border-color: $color-gray;
+    }
+  }
+}
+
+.mobile-controls {
+  display: none;
+  position: relative;
+  padding-top: 30px;
+
+  @media (max-width: $break-point-tablet) {
+    display: flex;
+  }
+
+  &__close {
+    position: absolute;
+    top: 10px;
+    right: 0;
+  }
+}
+
+.bag-quantity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  background: yellow;
+  font-size: 14px;
+  font-weight: 700;
+  color: black;
+  margin-left: -8px;
+}
+
+.header__search {
+  margin-left: 100px;
+
+  @media (max-width: $break-point-tablet) {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 1300px) {
+  .header__search {
+    margin-left: 20px;
+  }
+
+  .header__delivery-info {
+    margin-left: 4vw;
+  }
+}
+
+@media (max-width: $break-point-tablet-lg) {
+  .header {
+    position: relative;
+
+    & .content {
+    max-width: 320px;
+    }
+
+    &__search {
+      margin-left: 0;
+     }
+  }
+
+  .header__delivery-info {
+     margin-left: 0;
+  }
+}
+
+@media (max-width: 340px) {
+  .header .content {
+      max-width: 300px;
+  }
+}

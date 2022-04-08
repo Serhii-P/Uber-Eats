@@ -1,0 +1,150 @@
+@import '../../styles/utils';
+
+.footer {
+  padding: 64px 0;
+  background-color: #262626;
+  overflow: hidden;
+
+  @media (max-width: $break-point-tablet) {
+    padding: 40px 0;
+  }
+
+  &__top-part {
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #c4c4c4;
+
+    @media (max-width: $break-point-tablet) {
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  &__top-part,
+  &__bottom-part {
+    @extend %flex-row;
+    align-items: flex-start;
+
+    @media (max-width: $break-point-phone-lg) {
+      flex-direction: column;
+      margin-left: 20px;
+    }
+  }
+
+  &__main,
+  &__copyright {
+    padding-right: 40px;
+    flex-basis: 45vw;
+
+    @media (max-width: $break-point-phone-lg) {
+      flex-basis: initial;
+    }
+  }
+
+  &__copyright {
+    color: #fff;
+    font-size: 14px;
+
+    @media (max-width: $break-point-phone-lg) {
+     order: 1;
+    }
+  }
+
+  &__main {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column nowrap;
+  }
+
+  &__logo-container {
+    @extend %flex-row;
+    margin-bottom: 40px;
+
+    @media (max-width: $break-point-tablet) {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 0;
+    }
+  }
+
+  &__logo {
+    margin-right: 40px;
+
+    @media (max-width: $break-point-tablet) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__mobile-app {
+    display: inline-block;
+
+    @media (max-width: $break-point-tablet) {
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    :first-of-type {
+      margin-right: 20px;
+    }
+  }
+
+  &__top-links:last-of-type {
+    margin-left: 10vw;
+
+    @media (max-width: $break-point-phone-lg) {
+      margin-left: 0;
+    }
+  }
+
+  &__bottom-links {
+    @extend %flex-row;
+
+    margin-bottom: 40px;
+    margin-top: 13px;
+
+    @media (max-width: $break-point-phone-lg) {
+      flex-direction: column;
+      align-items: flex-start;
+      margin: 0;
+      order: 1;
+    }
+
+    .links__link:not(:last-of-type) {
+      margin-right: 40px;
+    }
+  }
+
+  &__misc {
+    @media (max-width: $break-point-phone-lg) {
+      flex-direction: column;
+      display: flex;
+      margin-top: 20px;
+    }
+  }
+
+  &__social {
+    display: flex;
+    justify-content: space-evenly;
+
+    @media (max-width: $break-point-tablet) {
+      justify-content: space-between;
+    }
+  }
+}
+
+.links {
+  &__link {
+    display: block;
+    margin-bottom: 16px;
+    color: #fff;
+    white-space: nowrap;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.social__link {
+  margin-bottom: 20px;
+}

@@ -1,0 +1,77 @@
+@import '../../styles/variables.scss';
+
+.item-card {
+  display: flex;
+  justify-content: space-between;
+  height: 157px;
+  padding: 0;
+  text-align: initial;
+  border: 1px solid $color-gray;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:hover &__title {
+    text-decoration: underline;
+  }
+
+  &__left-section {
+    min-width: 182px;
+    max-width: 542px;
+    height: 157px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    @media (max-width: $break-point-phone) {
+      min-width: 148px;
+    }
+  }
+
+  &__title {
+    font-size: 16px;
+    line-height: 21px;
+    margin: 0 0 5px 0;
+  }
+
+  &__description {
+    color: $color-dark-grey;
+    font-size: 14px;
+    line-height: 21px;
+    margin: 0 0 14px 0;
+    overflow: auto;
+    position: relative;
+
+    @media (max-width: $break-point-phone) {
+      width: 116px;
+    }
+  }
+
+  &__price {
+    font-size: 16px;
+    line-height: 21px;
+  }
+
+  &__img-container {
+    min-width: 159px;
+    width: 159px;
+    overflow: hidden;
+    height: 155px;
+    border-left: 1px solid $color-gray;
+    @media (max-width: $break-point-phone) {
+      width: 125px;
+      min-width: 125px;
+    }
+  }
+
+  &__img {
+    height: 155px;
+    width: 159px;
+
+    @media (max-width: $break-point-phone) {
+      width: 125px;
+    }
+  }
+}

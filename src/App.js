@@ -22,6 +22,7 @@ function App() {
             <ToastContainer />
           <Routes>
             <Route path="/" element={<RestaurantsListPage />} />
+            <Route path="/uber-eats" element={<RestaurantsListPage />} />
             <Route path="/:id" element={<RestaurantPage />} />
             <Route path="/cart" exact element={ <Cart/> } />
             <Route path="*" element={<NotFound />} />

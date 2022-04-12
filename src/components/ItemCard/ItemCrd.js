@@ -46,7 +46,7 @@ export const ItemCard = (props) => {
               className="item-card__img" />
               )
               : (
-                <img src="./images/no-image.png" className="item-card__img" alt={title} />
+                <img src="./uber-eats/images/no-image.png" className="item-card__img" alt={title} />
               )
             }
           </div>

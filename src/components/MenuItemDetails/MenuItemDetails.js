@@ -78,7 +78,7 @@ const MenuItemDetails = () => {
           />
           ) : (
           <img 
-            src="./images/no-image.png" alt={title} 
+            src="./uber-eats/images/no-image.png" alt={title} 
             className="menu-item-details__main-noimg"/>
           )
         }
@@ -148,7 +148,7 @@ const MenuItemDetails = () => {
                 className="menu-item-details__decrement-btn"
                 onClick={decrementHandler} >
                 <img
-                  src="images/btn-minus.svg"
+                  src="./uber-eats/images/btn-minus.svg"
                   alt="remove one item"
                   className="menu-item-details__decrement-btn-img"
                 />
@@ -162,7 +162,7 @@ const MenuItemDetails = () => {
                 onClick={incrementHandler}
               >
                 <img
-                  src="images/btn-plus.svg"
+                  src="./uber-eats/images/btn-plus.svg"
                   alt="add one item"
                   className="menu-item-details__increment-btn-img"
                 />

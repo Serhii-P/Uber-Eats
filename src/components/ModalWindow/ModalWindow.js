@@ -21,7 +21,7 @@ const ModalWindow = ({children}) => {
               onClick={closeModalWindow}
         >
           <img
-            src="./images/close-btn.svg"
+            src="./uber-eats/images/close-btn.svg"
             alt="close button"
             className="modal-window__close-btn-img"
           />

@@ -60,13 +60,13 @@ const Header = () => {
       <div className="content">
         <div className="header__inner">
           <Link to="/uber-eats">
-            <img src="./uber-eats/images/logo.svg" alt="Uber Eats" className="header__logo" />
+            <img src="./images/logo.svg" alt="Uber Eats" className="header__logo" />
           </Link>
 
           <div className="header__delivery-info">
             <div className="header__locations-info">
                 <Select 
-                iconUrl="./uber-eats/images/locationImg.svg"
+                iconUrl="./images/locationImg.svg"
                 onChange={cityChangeHandler}
                 passedData={destination}
                 placeholder="Select city"
@@ -76,7 +76,7 @@ const Header = () => {
             </div>
       
               <Select 
-                iconUrl="./uber-eats/images/time.png"
+                iconUrl="./images/time.png"
                 onChange={deliveryTimeHandler}
                 passedData={deliveryTimeOpt}
                 placeholder="Any time"
@@ -93,7 +93,7 @@ const Header = () => {
             label="Find"
             onChange={searchHandler}
             placeholder="Search"
-            iconUrl="./uber-eats/images/search.svg"
+            iconUrl="./images/search.svg"
           />
         </div>
       </label>

@@ -7,14 +7,14 @@ const Footer = () => (
       <div className="footer__top-part">
         <div className="footer__main">
           <div className="footer__logo-container">
-            <img src="./uber-eats/images/logo-white.svg" alt="Uber Eats" className="footer__logo" />
+            <img src="./images/logo-white.svg" alt="Uber Eats" className="footer__logo" />
           </div>
           <div className="footer__mobile-apps">
             <a href="/Javascript" className="footer__mobile-app">
-              <img src="./uber-eats/images/google-play.png" alt="Google play" />
+              <img src="./images/google-play.png" alt="Google play" />
             </a>
             <a href="/Javascript" className="footer__mobile-app">
-              <img src="./uber-eats/images/apple-store.png" alt="Apple store" />
+              <img src="./images/apple-store.png" alt="Apple store" />
             </a>
           </div>
         </div>
@@ -65,13 +65,13 @@ const Footer = () => (
 
           <div className="footer__social social">
             <a href="/Javascript" className="social__link">
-              <img src="./uber-eats/images/fb.svg" alt="facebook" />
+              <img src="./images/fb.svg" alt="facebook" />
             </a>
             <a href="/Javascript" className="social__link">
-              <img src="./uber-eats/images/tw.svg" alt="twitter" />
+              <img src="./images/tw.svg" alt="twitter" />
             </a>
             <a href="/Javascript" className="social__link">
-              <img src="./uber-eats/images/ig.svg" alt="instagram" />
+              <img src="./images/ig.svg" alt="instagram" />
             </a>
           </div>
         </div>
